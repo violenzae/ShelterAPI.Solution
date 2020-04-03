@@ -1,0 +1,14 @@
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\bin\Debug\netcoreapp2.2\ShelterAPI.deps.json
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\bin\Debug\netcoreapp2.2\ShelterAPI.runtimeconfig.json
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\bin\Debug\netcoreapp2.2\ShelterAPI.runtimeconfig.dev.json
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\bin\Debug\netcoreapp2.2\ShelterAPI.dll
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\bin\Debug\netcoreapp2.2\ShelterAPI.pdb
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\obj\Debug\netcoreapp2.2\ShelterAPI.csprojAssemblyReference.cache
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\obj\Debug\netcoreapp2.2\ShelterAPI.csproj.CoreCompileInputs.cache
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\obj\Debug\netcoreapp2.2\ShelterAPI.RazorAssemblyInfo.cache
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\obj\Debug\netcoreapp2.2\ShelterAPI.RazorAssemblyInfo.cs
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\obj\Debug\netcoreapp2.2\ShelterAPI.AssemblyInfoInputs.cache
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\obj\Debug\netcoreapp2.2\ShelterAPI.AssemblyInfo.cs
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\obj\Debug\netcoreapp2.2\ShelterAPI.RazorTargetAssemblyInfo.cache
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\obj\Debug\netcoreapp2.2\ShelterAPI.dll
+C:\Users\viole\desktop\ShelterAPI.Solution\ShelterAPI\obj\Debug\netcoreapp2.2\ShelterAPI.pdb
