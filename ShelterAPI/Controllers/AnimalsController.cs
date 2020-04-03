@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using ShelterAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace ShelterAPI.Controllers
 { 
@@ -20,7 +21,7 @@ namespace ShelterAPI.Controllers
 
     // GET api/animals
     [HttpGet]
-    public ActionResult<IEnumerable<Animal>> Get(string species, string breed, string gender, string name, int? age)
+    public ActionResult<IEnumerable<Animal>> Get(string species, string breed, string gender, string name, int? age, string random)
     {
       var query = _db.Animals.AsQueryable();
 
@@ -43,6 +44,13 @@ namespace ShelterAPI.Controllers
       if (age != null)
       {
         query = query.Where(entry => entry.Age == age);
+      }
+      if (random == "yes")
+      {
+        int count = _db.Animals.Count();
+        Random rnd = new Random();
+        int randNum = rnd.Next(1, (count+1));
+        query = query.Where(entry => entry.AnimalId == randNum);
       }
 
       return query.ToList();
