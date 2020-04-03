@@ -45,13 +45,6 @@ namespace ShelterAPI.Controllers
       {
         query = query.Where(entry => entry.Age == age);
       }
-      if (random == "yes")
-      {
-        int count = _db.Animals.Count();
-        Random rnd = new Random();
-        int randNum = rnd.Next(1, (count+1));
-        query = query.Where(entry => entry.AnimalId == randNum);
-      }
 
       return query.ToList();
     }
@@ -61,6 +54,15 @@ namespace ShelterAPI.Controllers
     public ActionResult<Animal> Get(int id)
     {
       return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
+    }
+
+    [HttpGet("random")]
+    public ActionResult<Animal> Get()
+    {
+      int count = _db.Animals.Count();
+      Random rnd = new Random();
+      int randNum = rnd.Next(1, (count+1));
+      return _db.Animals.FirstOrDefault(entry => entry.AnimalId == randNum);
     }
 
     // POST api/Animals
