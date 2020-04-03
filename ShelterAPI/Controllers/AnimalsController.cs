@@ -22,7 +22,7 @@ namespace ShelterAPI.Controllers
 
     // GET api/animals
     [HttpGet]
-    public ActionResult<IEnumerable<Animal>> Get(string species, string breed, string gender, string name, int? age, string sort)
+    public ActionResult<IEnumerable<Animal>> Get(string species, string breed, string gender, string name, int? age, string sortColumn)
     {
       var query = _db.Animals.AsQueryable();
       
@@ -48,25 +48,25 @@ namespace ShelterAPI.Controllers
         query = query.Where(entry => entry.Age == age);
       }
 
-      if (sort != null)
+      if (sortColumn != null)
       {
-        if (sort == "species")
+        if (sortColumn == "species")
         {
           return query.OrderBy(entry => entry.Species).ToList();
         } 
-        else if (sort == "age")
+        else if (sortColumn == "age")
         {
           return query.OrderBy(entry => entry.Age).ToList();
         } 
-        else if (sort == "gender")
+        else if (sortColumn == "gender")
         {
           return query.OrderBy(entry => entry.Gender).ToList();
         } 
-        else if (sort == "name")
+        else if (sortColumn == "name")
         {
           return query.OrderBy(entry => entry.Name).ToList();
         } 
-        else if (sort == "breed")
+        else if (sortColumn == "breed")
         {
           return query.OrderBy(entry => entry.Breed).ToList();
         } 
