@@ -14,7 +14,7 @@ namespace ShelterAPI
     {
       Configuration = configuration;
     }
-
+  
     public IConfiguration Configuration { get; }
 
     // This method gets called by the runtime. Use this method to add services to the container.
@@ -46,6 +46,11 @@ namespace ShelterAPI
             Url = string.Empty
           };
         };
+      });
+      services.AddApiVersioning(o => {
+      o.ReportApiVersions = true;
+      o.AssumeDefaultVersionWhenUnspecified = true;
+      o.DefaultApiVersion = new ApiVersion(1, 0);
       });
     }
 

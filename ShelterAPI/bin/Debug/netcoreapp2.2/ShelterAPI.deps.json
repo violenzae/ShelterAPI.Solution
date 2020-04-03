@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "f00ec33dfae3487310a290848e422fe2c8b187b7"
+    "signature": "b8d3a76f7c3406e863fff767d5cd29638bfe78f3"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "ShelterAPI/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Versioning": "4.1.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -36,6 +37,20 @@
         },
         "compile": {
           "ShelterAPI.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Versioning/4.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Versioning.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.7277.28678"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Versioning.dll": {}
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
@@ -3395,6 +3410,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNetCore.Mvc.Versioning/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QuFIocMUP8K9+QrjLNio6uD3CE805afEJNz9qaEPl0ah2D2iQrmEW3bD5+LfathtdVS4MkmmgEVrhJBP1yFOFA==",
+      "path": "microsoft.aspnetcore.mvc.versioning/4.1.0",
+      "hashPath": "microsoft.aspnetcore.mvc.versioning.4.1.0.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "type": "package",
