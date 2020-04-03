@@ -55,6 +55,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[13.3.0, )"
             }
           },
           "imports": [
