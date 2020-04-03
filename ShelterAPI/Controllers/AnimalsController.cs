@@ -5,6 +5,7 @@ using ShelterAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 
+
 namespace ShelterAPI.Controllers
 { 
   [ApiVersion("1.0")]
@@ -21,9 +22,10 @@ namespace ShelterAPI.Controllers
 
     // GET api/animals
     [HttpGet]
-    public ActionResult<IEnumerable<Animal>> Get(string species, string breed, string gender, string name, int? age, string random)
+    public ActionResult<IEnumerable<Animal>> Get(string species, string breed, string gender, string name, int? age, string sort)
     {
       var query = _db.Animals.AsQueryable();
+      
 
       if (species != null)
       {
@@ -46,7 +48,37 @@ namespace ShelterAPI.Controllers
         query = query.Where(entry => entry.Age == age);
       }
 
+      if (sort != null)
+      {
+        if (sort == "species")
+        {
+          return query.OrderBy(entry => entry.Species).ToList();
+        } 
+        else if (sort == "age")
+        {
+          return query.OrderBy(entry => entry.Age).ToList();
+        } 
+        else if (sort == "gender")
+        {
+          return query.OrderBy(entry => entry.Gender).ToList();
+        } 
+        else if (sort == "name")
+        {
+          return query.OrderBy(entry => entry.Name).ToList();
+        } 
+        else if (sort == "breed")
+        {
+          return query.OrderBy(entry => entry.Breed).ToList();
+        } 
+        else
+        {
+          return query.ToList();
+        }
+      }
+      else
+      {
       return query.ToList();
+      }
     }
 
     // GET api/Animals/5
