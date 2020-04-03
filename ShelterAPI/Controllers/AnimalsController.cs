@@ -52,6 +52,9 @@ namespace ShelterAPI.Controllers
     [HttpDelete("{id}")]
     public void Delete(int id)
     {
+      var animalToDelete = _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
+      _db.Animals.Remove(animalToDelete);
+      _db.SaveChanges();
     }
   }
 }
