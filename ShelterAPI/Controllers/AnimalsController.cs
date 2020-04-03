@@ -2,6 +2,7 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using ShelterAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ShelterAPI.Controllers
 {
@@ -40,9 +41,11 @@ namespace ShelterAPI.Controllers
 
     // PUT api/Animals/5
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
+    public void Put(int id, [FromBody] Animal animal)
     {
-      
+        animal.AnimalId = id;
+        _db.Entry(animal).State = EntityState.Modified;
+        _db.SaveChanges();
     }
 
     // DELETE api/Animals/5
