@@ -25,9 +25,9 @@ namespace ShelterAPI.Controllers
 
     // GET api/Animals/5
     [HttpGet("{id}")]
-    public ActionResult<string> Get(int id)
+    public ActionResult<Animal> Get(int id)
     {
-      return "value";
+      return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
     }
 
     // POST api/Animals
@@ -42,6 +42,7 @@ namespace ShelterAPI.Controllers
     [HttpPut("{id}")]
     public void Put(int id, [FromBody] string value)
     {
+      
     }
 
     // DELETE api/Animals/5
